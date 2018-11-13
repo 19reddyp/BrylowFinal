@@ -22,17 +22,17 @@
       </Label>
       <ImageView fitHeight="28.0" fitWidth="33.0" layoutX="11.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Downloads/icon.png" />
+            <Image url="@../../images/icon.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="28.0" fitWidth="33.0" layoutX="515.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Downloads/avatar.png" />
+            <Image url="@../../images/avatar.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="28.0" fitWidth="33.0" layoutX="558.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Downloads/shopping-cart.png" />
+            <Image url="@../../images/shopping-cart.png" />
          </image>
       </ImageView>
       <AnchorPane layoutY="40.0" prefHeight="371.0" prefWidth="600.0" style="-fx-background-color: black;">
