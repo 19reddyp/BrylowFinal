@@ -30,8 +30,8 @@
             <Image url="@../images/icon.png" />
          </image>
       </ImageView>
-      <TextField layoutX="110.0" layoutY="120.0" prefHeight="36.0" prefWidth="320.0" promptText="Street Address" style="-fx-border-color: aaaaaa;" />
-      <Label layoutX="110.0" layoutY="98.0" text="RESTAURANT ADDRESS" textFill="WHITE">
+      <TextField layoutX="110.0" layoutY="120.0" prefHeight="36.0" prefWidth="320.0" style="-fx-border-color: aaaaaa;" />
+      <Label layoutX="110.0" layoutY="98.0" text="RESTAURANT NAME" textFill="WHITE">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
