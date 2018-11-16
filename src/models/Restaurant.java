@@ -12,9 +12,11 @@ public class Restaurant {
 	private String price;
 	private ArraySortedList<Item> menu;
 	private ArraySortedList<Review> reviews;
+	private ArraySortedList<Double> reviewNum;
 
 	public Restaurant(int id, String name, String address, String phone, String email, String hours, String cuisine,
-			String type, String price, ArraySortedList<Item> menu, ArraySortedList<Review> reviews) {
+			String type, String price, ArraySortedList<Item> menu, ArraySortedList<Review> reviews,
+			ArraySortedList<Double> reviewNum) {
 		this.id = id;
 		this.name = name;
 		this.address = address;
@@ -24,15 +26,24 @@ public class Restaurant {
 		this.cuisine = cuisine;
 		this.type = type;
 		this.price = price;
-		menu = new ArraySortedList<Item>();
-		reviews = new ArraySortedList<Review>();
+		this.menu = menu;
+		this.reviews = reviews;
+		this.reviewNum = reviewNum;
+
 	}
+
 	public void addMenu(Item toAdd) {
 		menu.add(toAdd);
 	}
+
 	public void addReview(Review toAdd) {
 		reviews.add(toAdd);
 	}
+
+	public void addReviewNum(double toAdd) {
+		reviewNum.add(toAdd);
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -103,5 +114,17 @@ public class Restaurant {
 
 	public void setPrice(String price) {
 		this.price = price;
+	}
+
+	public String getRating() {
+		int num = reviewNum.numElements;
+		double count = 0;
+		for(int x=0; x<num; x++) {
+			count+=reviewNum.getNext();
+		}
+		double avg = count/num;
+		avg = (avg*10)/10;
+		String temp = Double.toString(avg);
+		return temp;
 	}
 }
