@@ -48,16 +48,21 @@ public class RestaurantListCell extends ListCell<Restaurant> {
 		box = new HBox(info,open);
 	}
 
-	public void getList(Restaurant listItem) {
-		name.setText(listItem.getName());
-		address.setText(listItem.getAddress());
-		phone.setText(listItem.getPhone());
-		email.setText(listItem.getEmail());
-		hours.setText(listItem.getHours());
-		cuisine.setText(listItem.getCuisine());
-		type.setText(listItem.getType());
-		price.setText(listItem.getPrice());
-		ratings.setText(listItem.getRating());
+	public void updateItem(Restaurant item, boolean empty) {
+		super.updateItem(item, empty);
+		if(empty) setGraphic(null);
+		else {
+		name.setText(item.getName());
+		address.setText(item.getAddress());
+		phone.setText(item.getPhone());
+		email.setText(item.getEmail());
+		hours.setText(item.getHours());
+		cuisine.setText(item.getCuisine());
+		type.setText(item.getType());
+		price.setText(item.getPrice());
+		ratings.setText(item.getRating());
+		setGraphic(box);
+		}
 	}
 
 }

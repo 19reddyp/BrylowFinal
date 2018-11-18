@@ -10,8 +10,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.AnchorPane;
+import javafx.util.Callback;
 import models.Restaurant;
 
 public class RestaurantController {
@@ -28,7 +30,15 @@ public class RestaurantController {
 		list = new ListView<Restaurant>();
 		AnchorPane pane = FXMLLoader.load(getClass().getClassLoader().getResource("/restaurant/Restaurant.fxml"));
 		root.getChildren().setAll(pane);
-		ObservableList<Restaurant> restList = FXCollections.observableArrayList();
-		
+		ObservableList<Restaurant> list2 = FXCollections.observableArrayList();
+		// add stuff from file to restList
+		list.setItems(list2);
+		list.setCellFactory(new Callback<ListView<Restaurant>, ListCell<Restaurant>>() {
+			@Override
+			public ListCell<Restaurant> call(ListView<Restaurant> listView) {
+				return new RestaurantListCell();
+			}
+		});
+
 	}
 }
