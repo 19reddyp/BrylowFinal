@@ -21,26 +21,20 @@ import javafx.stage.Stage;
 
 public class LoginController {
 	@FXML
-	// The reference of inputText will be injected by the FXML loader
 	private TextField user;
 
-	// The reference of outputText will be injected by the FXML loader
 	@FXML
 	private PasswordField pass;
 
 	@FXML
-	// The reference of inputText will be injected by the FXML loader
 	private Button button;
 
 	@FXML
-	// The reference of inputText will be injected by the FXML loader
 	private Text fapa;
 
 	@FXML
-	// The reference of inputText will be injected by the FXML loader
 	private AnchorPane root;
 
-	// Add a public no-args constructor
 	public LoginController() {
 	}
 
