@@ -11,15 +11,15 @@ import models.Restaurant;
 import javafx.collections.ListChangeListener;
 import javafx.collections.FXCollections;
 public class RestaurantController implements Initializable{
-	@FXML public ListView<String> listview;
+	@FXML private ListView<String> listview;
 	public RestaurantController() {
-		listview = new ListView<String>();
-		ObservableList<String> list = FXCollections.observableArrayList("Mark","Tom","Joe");
-		listview.getItems().addAll("bob","joe","john");
+		
 		//listview.setCellFactory(ComboBoxListCell.forListView(list));
 	}
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
+//		listview = new ListView<String>();
+		ObservableList<String> list = FXCollections.observableArrayList("Mark","Tom","Joe");
+		listview.setItems(list);
 	}
 }
