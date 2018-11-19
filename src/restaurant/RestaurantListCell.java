@@ -2,11 +2,14 @@ package restaurant;
 
 import java.io.IOException;
 
+import detail.DetailController;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
@@ -17,6 +20,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import models.ArraySortedList;
 import models.Item;
 import models.Restaurant;
@@ -44,9 +48,10 @@ public class RestaurantListCell extends ListCell<Restaurant> {
 	protected ImageView logo;
 	@FXML
 	protected AnchorPane root;
-
+	@FXML
+	protected Stage thisStage;
 	public RestaurantListCell() {
-
+		
 	}
 
 	@Override
@@ -98,20 +103,25 @@ public class RestaurantListCell extends ListCell<Restaurant> {
 			box.setSpacing(50);
 			open.setText("Details");
 			open.setStyle("-fx-background-color: #aaaaaa; -fx-border-color: black");
-//			open.setOnAction(new EventHandler<ActionEvent>() {
-//				@Override
-//				public void handle(ActionEvent event) {
-//					DetailController restaurantView = new DetailController(item);
-//					FXMLLoader loader = new FXMLLoader(getClass().getResource("../detail/RestaurantDetail.fxml"));
-//					loader.setController(restaurantView);
-//					try {
-//						AnchorPane pane = (AnchorPane) loader.load();
-//						root.getChildren().setAll(pane);
-//					} catch (IOException e) {
-//						e.printStackTrace();
-//					}
-//				}
-//			});
+			open.setOnAction(new EventHandler<ActionEvent>(){
+				@Override
+				public void handle(ActionEvent event){
+					Parent pane = null;
+					try {
+					DetailController restaurantView = new DetailController();
+					FXMLLoader loader = new FXMLLoader(getClass().getResource("../detail/RestaurantDetail.fxml"));
+					loader.setController(restaurantView);
+					restaurantView.changeInfo(item);
+						pane = loader.load();
+					} catch (IOException e) {
+						
+					}
+					Scene table = new Scene(pane);
+					Stage x = new Stage();
+					x.setScene(table);
+					x.show();
+				}
+			});
 			setGraphic(box);
 		}
 	}

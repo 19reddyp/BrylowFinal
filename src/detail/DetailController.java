@@ -34,7 +34,7 @@ public class DetailController {
 	@FXML
 	protected AnchorPane root;
 
-	public DetailController(Restaurant toDisplay) {
+	public DetailController() {
 		logo = new ImageView();
 		rating = new ImageView();
 		name = new Text();
@@ -45,6 +45,8 @@ public class DetailController {
 		phone = new Text();
 		email = new Text();
 		hours = new Text();
+	}
+	public void changeInfo(Restaurant toDisplay) {
 		logo.setImage(new Image(toDisplay.getImageURL()));
 		if (toDisplay.getRating() == 1)
 			rating.setImage(new Image("detail/one.png"));

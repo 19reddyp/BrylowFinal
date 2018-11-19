@@ -73,7 +73,7 @@
                            <children>
                               <ImageView fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../images/address.png" />
+                                    <Image url="@address.png" />
                                  </image>
                               </ImageView>
                               <Text fx:id="address" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
@@ -83,7 +83,7 @@
                               </Text>
                               <ImageView fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../images/type.png" />
+                                    <Image url="@phone.png" />
                                  </image>
                               </ImageView>
                               <Text fx:id="type" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
@@ -93,7 +93,7 @@
                               </Text>
                               <ImageView fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../images/dining.png" />
+                                    <Image url="@email.png" />
                                  </image>
                               </ImageView>
                               <Text fx:id="dining" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
@@ -107,7 +107,7 @@
                            <children>
                               <ImageView fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../images/phone.png" />
+                                    <Image url="@type.png" />
                                  </image>
                               </ImageView>
                               <Text fx:id="phone" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
@@ -117,7 +117,7 @@
                               </Text>
                               <ImageView fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../images/email.png" />
+                                    <Image url="@cuisine.png" />
                                  </image>
                               </ImageView>
                               <Text fx:id="email" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
@@ -127,7 +127,7 @@
                               </Text>
                               <ImageView fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../images/time.png" />
+                                    <Image url="@hours.png" />
                                  </image>
                               </ImageView>
                               <Text fx:id="hours" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
