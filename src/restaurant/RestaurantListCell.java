@@ -3,10 +3,12 @@ package restaurant;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import models.ArraySortedList;
@@ -21,25 +23,13 @@ public class RestaurantListCell extends ListCell<Restaurant> {
 	@FXML
 	protected Text address;
 	@FXML
-	protected Text phone;
-	@FXML
-	protected Text email;
-	@FXML
-	protected Text hours;
-	@FXML
-	protected Text cuisine;
-	@FXML
-	protected Text type;
-	@FXML
 	protected Text price;
 	@FXML
 	protected HBox box;
 	@FXML
 	protected String user;
 	@FXML
-	protected Text ratings;
-	@FXML
-	protected Restaurant restaurant;
+	protected ImageView ratings;
 	@FXML
 	protected ActionEvent event;
 	@FXML
@@ -59,32 +49,36 @@ public class RestaurantListCell extends ListCell<Restaurant> {
 		else {
 			id++;
 			name = new Text();
+			name.setStyle("-fx-font: 18 arial;");
 			address = new Text();
-			phone = new Text();
-			email = new Text();
-			hours = new Text();
-			cuisine = new Text();
-			type = new Text();
 			price = new Text();
-			ratings = new Text();
+			ratings = new ImageView();
 			open = new Button();
 			logo = new ImageView();
-			HBox contact = new HBox(phone, email);
-			HBox food = new HBox(cuisine, type);
-			HBox pandr = new HBox(price, ratings);
-			VBox info = new VBox(name, address, contact, hours, food, pandr);
-			box = new HBox(logo, info, open);
+			HBox one = new HBox(name, ratings, price);
+			one.setSpacing(5);
+			VBox info = new VBox(one, address, open);
+			info.setSpacing(5);
+			box = new HBox(logo, info);
 			logo.setImage(new Image(item.getImageURL()));
+			logo.setPreserveRatio(true);
+			logo.setFitHeight(70);
 			name.setText(item.getName());
 			address.setText(item.getAddress());
-			phone.setText(item.getPhone());
-			email.setText(item.getEmail());
-			hours.setText(item.getHours());
-			cuisine.setText(item.getCuisine());
-			type.setText(item.getType());
-			price.setText(item.getPrice());
-			ratings.setText(item.getRating());
-			box.setMinWidth(600);
+			price.setText(item.getPriceRange());
+			if (item.getRating() == 1)
+				ratings.setImage(new Image("restaurant/one.png"));
+			else if (item.getRating() == 2)
+				ratings.setImage(new Image("restaurant/two.png"));
+			else if (item.getRating() == 3)
+				ratings.setImage(new Image("restaurant/three.png"));
+			else if (item.getRating() == 4)
+				ratings.setImage(new Image("restaurant/four.png"));
+			else ratings.setImage(new Image("restaurant/five.png"));
+			ratings.setPreserveRatio(true);
+			ratings.setFitHeight(15);
+			box.setSpacing(50);
+			open.setText("Order");
 			setGraphic(box);
 		}
 	}

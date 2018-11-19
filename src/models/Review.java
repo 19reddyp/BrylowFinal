@@ -1,10 +1,10 @@
 package models;
 
-public class Review {
-	private double rating;
+public class Review implements Comparable<Review>{
+	private int rating;
 	private String explanation;
 	
-	public Review(double xRating, String xExplanation) {
+	public Review(int xRating, String xExplanation) {
 		rating = xRating;
 		explanation = xExplanation;
 	}
@@ -12,7 +12,7 @@ public class Review {
 	public double getRating() {
 		return rating;
 	}
-	public void setRating(double rating) {
+	public void setRating(int rating) {
 		this.rating = rating;
 	}
 	public String getExplanation() {
@@ -20,5 +20,15 @@ public class Review {
 	}
 	public void setExplanation(String explanation) {
 		this.explanation = explanation;
+	}
+	public int compareTo(Review other) {
+		if (rating>other.getRating()) {
+			return 1;
+		} else if (rating == other.getRating()) {
+			return 0;
+		} else {
+			return -1;
+
+		}
 	}
 }

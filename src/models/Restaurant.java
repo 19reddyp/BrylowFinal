@@ -13,11 +13,9 @@ public class Restaurant {
 	private String imageURL;
 	private ArraySortedList<Item> menu;
 	private ArraySortedList<Review> reviews;
-	private ArraySortedList<Double> reviewNum;
 
 	public Restaurant(int id, String name, String address, String phone, String email, String hours, String cuisine,
-			String type, String price, ArraySortedList<Item> menu, ArraySortedList<Review> reviews,
-			ArraySortedList<Double> reviewNum, String imageURL) {
+			String type, String price, ArraySortedList<Item> menu, ArraySortedList<Review> reviews, String imageURL) {
 		this.id = id;
 		this.name = name;
 		this.address = address;
@@ -29,7 +27,6 @@ public class Restaurant {
 		this.price = price;
 		this.menu = menu;
 		this.reviews = reviews;
-		this.reviewNum = reviewNum;
 		this.imageURL = imageURL;
 
 	}
@@ -42,9 +39,6 @@ public class Restaurant {
 		reviews.add(toAdd);
 	}
 
-	public void addReviewNum(double toAdd) {
-		reviewNum.add(toAdd);
-	}
 
 	public int getId() {
 		return id;
@@ -110,13 +104,28 @@ public class Restaurant {
 		this.type = type;
 	}
 
-	public String getPrice() {
+	public String getPriceRange() {
+		double min = Double.MAX_VALUE;
+		double max = 0;
+		for (int x = 0; x < menu.numElements; x++) {
+			double temp = menu.getNext().getPrice();
+			if(temp<min) {
+				min = temp;
+			}
+			if(temp>max) {
+				max = temp;
+			}
+		}
+		String xMin = Double.toString(min);
+		String xMax = Double.toString(max);
+		price = ("$"+xMin+" to $"+xMax); 
 		return price;
 	}
 
 	public void setPrice(String price) {
 		this.price = price;
 	}
+
 	public String getImageURL() {
 		return imageURL;
 	}
@@ -125,15 +134,13 @@ public class Restaurant {
 		this.imageURL = url;
 	}
 
-	public String getRating() {
-		int num = reviewNum.numElements;
+	public int getRating() {
+		int num = reviews.numElements;
 		double count = 0;
-		for(int x=0; x<num; x++) {
-			count+=reviewNum.getNext();
+		for (int x = 0; x < num; x++) {
+			count += reviews.getNext().getRating();
 		}
-		double avg = count/num;
-		avg = (avg*10)/10;
-		String temp = Double.toString(avg);
-		return temp;
+		int avg = (int) count / num;
+		return avg;
 	}
 }

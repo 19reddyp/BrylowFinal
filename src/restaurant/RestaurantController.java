@@ -31,11 +31,12 @@ public class RestaurantController implements Initializable {
 		// add stuff from file to restList
 		ArraySortedList<Item> menu = new ArraySortedList<Item>();
 		ArraySortedList<Review> reviews = new ArraySortedList<Review>();
-		ArraySortedList<Double> reviewNum = new ArraySortedList<Double>();
-		reviewNum.add(4.7);
-		reviewNum.add(5.0);
-		Restaurant temp = new Restaurant(0, "Jersey Mike's", "1234 Street", "(262) 262-2626", "jersey@mikes.com",
-				"M-F 8am-9pm", "Sandwiches", "Casual", "$", menu, reviews, reviewNum,"restaurant/Jersey.png");
+		menu.add(new Item("#8",7.85));
+		menu.add(new Item("#9",6.85));
+		reviews.add(new Review(5,"good food"));
+		reviews.add(new Review(5,"excellent experience"));
+		Restaurant temp = new Restaurant(0, "JERSEY MIKE'S", "1234 Street", "(262) 262-2626", "jersey@mikes.com",
+				"M-F 8am-9pm", "Sandwiches", "Casual", "$", menu, reviews,"restaurant/Jersey.png");
 		observableRest.add(temp);
 	}
 
