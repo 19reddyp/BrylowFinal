@@ -50,8 +50,9 @@ public class RestaurantListCell extends ListCell<Restaurant> {
 	protected AnchorPane root;
 	@FXML
 	protected Stage thisStage;
+
 	public RestaurantListCell() {
-		
+
 	}
 
 	@Override
@@ -103,18 +104,17 @@ public class RestaurantListCell extends ListCell<Restaurant> {
 			box.setSpacing(50);
 			open.setText("Details");
 			open.setStyle("-fx-background-color: #aaaaaa; -fx-border-color: black");
-			open.setOnAction(new EventHandler<ActionEvent>(){
+			open.setOnAction(new EventHandler<ActionEvent>() {
 				@Override
-				public void handle(ActionEvent event){
+				public void handle(ActionEvent event) {
 					Parent pane = null;
 					try {
-					DetailController restaurantView = new DetailController();
-					FXMLLoader loader = new FXMLLoader(getClass().getResource("../detail/RestaurantDetail.fxml"));
-					loader.setController(restaurantView);
-					restaurantView.changeInfo(item);
+						FXMLLoader loader = new FXMLLoader(getClass().getResource("../detail/RestaurantDetail.fxml"));
+						DetailController restaurantView = loader.getController();
+						restaurantView.changeInfo(item);
 						pane = loader.load();
 					} catch (IOException e) {
-						
+
 					}
 					Scene table = new Scene(pane);
 					Stage x = new Stage();

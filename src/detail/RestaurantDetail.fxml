@@ -86,7 +86,7 @@
                                     <Image url="@phone.png" />
                                  </image>
                               </ImageView>
-                              <Text fx:id="type" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                              <Text fx:id="phone" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
                                  <font>
                                     <Font size="9.0" />
                                  </font>
@@ -96,7 +96,7 @@
                                     <Image url="@email.png" />
                                  </image>
                               </ImageView>
-                              <Text fx:id="dining" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                              <Text fx:id="email" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
                                  <font>
                                     <Font size="9.0" />
                                  </font>
@@ -110,7 +110,7 @@
                                     <Image url="@type.png" />
                                  </image>
                               </ImageView>
-                              <Text fx:id="phone" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                              <Text fx:id="type" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
                                  <font>
                                     <Font size="9.0" />
                                  </font>
@@ -120,7 +120,7 @@
                                     <Image url="@cuisine.png" />
                                  </image>
                               </ImageView>
-                              <Text fx:id="email" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                              <Text fx:id="dining" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
                                  <font>
                                     <Font size="9.0" />
                                  </font>
