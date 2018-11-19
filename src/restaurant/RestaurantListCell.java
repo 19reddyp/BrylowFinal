@@ -2,6 +2,7 @@ package restaurant;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
@@ -49,17 +50,25 @@ public class RestaurantListCell extends ListCell<Restaurant> {
 		else {
 			id++;
 			name = new Text();
-			name.setStyle("-fx-font: 18 arial;");
+			name.setStyle("-fx-font: 18 System;");
 			address = new Text();
 			price = new Text();
 			ratings = new ImageView();
 			open = new Button();
 			logo = new ImageView();
-			HBox one = new HBox(name, ratings, price);
+			HBox one = new HBox(name, ratings);
+			open.setAlignment(Pos.BASELINE_CENTER);
 			one.setSpacing(5);
-			VBox info = new VBox(one, address, open);
+			address.setWrappingWidth(250);
+			VBox info = new VBox(one, address, price);
 			info.setSpacing(5);
-			box = new HBox(logo, info);
+			info.setAlignment(Pos.CENTER);
+			HBox button = new HBox(open);
+			box = new HBox(logo, info, button);
+			box.setAlignment(Pos.CENTER);
+			button.setFillHeight(true);
+			button.setAlignment(Pos.CENTER_LEFT);
+			button.setPrefWidth(300);
 			logo.setImage(new Image(item.getImageURL()));
 			logo.setPreserveRatio(true);
 			logo.setFitHeight(70);
@@ -74,9 +83,10 @@ public class RestaurantListCell extends ListCell<Restaurant> {
 				ratings.setImage(new Image("restaurant/three.png"));
 			else if (item.getRating() == 4)
 				ratings.setImage(new Image("restaurant/four.png"));
-			else ratings.setImage(new Image("restaurant/five.png"));
+			else
+				ratings.setImage(new Image("restaurant/five.png"));
 			ratings.setPreserveRatio(true);
-			ratings.setFitHeight(15);
+			ratings.setFitHeight(18);
 			box.setSpacing(50);
 			open.setText("Order");
 			setGraphic(box);
