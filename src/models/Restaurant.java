@@ -10,13 +10,14 @@ public class Restaurant {
 	private String cuisine;
 	private String type;
 	private String price;
+	private String imageURL;
 	private ArraySortedList<Item> menu;
 	private ArraySortedList<Review> reviews;
 	private ArraySortedList<Double> reviewNum;
 
 	public Restaurant(int id, String name, String address, String phone, String email, String hours, String cuisine,
 			String type, String price, ArraySortedList<Item> menu, ArraySortedList<Review> reviews,
-			ArraySortedList<Double> reviewNum) {
+			ArraySortedList<Double> reviewNum, String imageURL) {
 		this.id = id;
 		this.name = name;
 		this.address = address;
@@ -29,6 +30,7 @@ public class Restaurant {
 		this.menu = menu;
 		this.reviews = reviews;
 		this.reviewNum = reviewNum;
+		this.imageURL = imageURL;
 
 	}
 
@@ -114,6 +116,13 @@ public class Restaurant {
 
 	public void setPrice(String price) {
 		this.price = price;
+	}
+	public String getImageURL() {
+		return imageURL;
+	}
+
+	public void setImageURL(String url) {
+		this.imageURL = url;
 	}
 
 	public String getRating() {
