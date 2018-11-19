@@ -1,13 +1,18 @@
 package restaurant;
 
+import java.io.IOException;
+
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
@@ -37,6 +42,8 @@ public class RestaurantListCell extends ListCell<Restaurant> {
 	protected Button open;
 	@FXML
 	protected ImageView logo;
+	@FXML
+	protected AnchorPane root;
 
 	public RestaurantListCell() {
 
@@ -64,13 +71,15 @@ public class RestaurantListCell extends ListCell<Restaurant> {
 			info.setSpacing(5);
 			info.setAlignment(Pos.CENTER);
 			HBox button = new HBox(open);
-			box = new HBox(logo, info, button);
-			button.setFillHeight(true);
-			button.setAlignment(Pos.CENTER_LEFT);
-			button.setPrefWidth(300);
 			logo.setImage(new Image(item.getImageURL()));
 			logo.setPreserveRatio(true);
-			logo.setFitHeight(70);
+			logo.setFitWidth(125);
+			HBox img = new HBox(logo);
+			img.setFillHeight(true);
+			img.setAlignment(Pos.CENTER_LEFT);
+			box = new HBox(img, info, button);
+			button.setFillHeight(true);
+			button.setAlignment(Pos.CENTER_LEFT);
 			name.setText(item.getName());
 			address.setText(item.getAddress());
 			price.setText(item.getPriceRange());
@@ -89,6 +98,20 @@ public class RestaurantListCell extends ListCell<Restaurant> {
 			box.setSpacing(50);
 			open.setText("Details");
 			open.setStyle("-fx-background-color: #aaaaaa; -fx-border-color: black");
+//			open.setOnAction(new EventHandler<ActionEvent>() {
+//				@Override
+//				public void handle(ActionEvent event) {
+//					DetailController restaurantView = new DetailController(item);
+//					FXMLLoader loader = new FXMLLoader(getClass().getResource("../detail/RestaurantDetail.fxml"));
+//					loader.setController(restaurantView);
+//					try {
+//						AnchorPane pane = (AnchorPane) loader.load();
+//						root.getChildren().setAll(pane);
+//					} catch (IOException e) {
+//						e.printStackTrace();
+//					}
+//				}
+//			});
 			setGraphic(box);
 		}
 	}
