@@ -65,7 +65,6 @@ public class RestaurantListCell extends ListCell<Restaurant> {
 			info.setAlignment(Pos.CENTER);
 			HBox button = new HBox(open);
 			box = new HBox(logo, info, button);
-			box.setAlignment(Pos.CENTER);
 			button.setFillHeight(true);
 			button.setAlignment(Pos.CENTER_LEFT);
 			button.setPrefWidth(300);
@@ -88,7 +87,8 @@ public class RestaurantListCell extends ListCell<Restaurant> {
 			ratings.setPreserveRatio(true);
 			ratings.setFitHeight(18);
 			box.setSpacing(50);
-			open.setText("Order");
+			open.setText("Details");
+			open.setStyle("-fx-background-color: #aaaaaa; -fx-border-color: black");
 			setGraphic(box);
 		}
 	}
