@@ -11,11 +11,11 @@ public class Restaurant {
 	private String type;
 	private String price;
 	private String imageURL;
-	private ArraySortedList<Item> menu;
-	private ArraySortedList<Review> reviews;
+	private ArrayUnsortedList<Item> menu;
+	private ArrayUnsortedList<Review> reviews;
 
 	public Restaurant(int id, String name, String address, String phone, String email, String hours, String cuisine,
-			String type, String price, ArraySortedList<Item> menu, ArraySortedList<Review> reviews, String imageURL) {
+			String type, String price, ArrayUnsortedList<Item> menu, ArrayUnsortedList<Review> reviews, String imageURL) {
 		this.id = id;
 		this.name = name;
 		this.address = address;
