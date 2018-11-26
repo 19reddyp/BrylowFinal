@@ -68,20 +68,20 @@
                                                 </Text>
                                              </children>
                                           </VBox>
-                                          <HBox prefHeight="24.0" prefWidth="155.0" style="-fx-spacing: 5;">
+                                          <HBox prefHeight="24.0" prefWidth="184.0" style="-fx-spacing: 5;">
                                              <children>
-                                                <VBox prefHeight="24.0" prefWidth="92.0" style="-fx-alignment: center;">
+                                                <VBox prefHeight="24.0" prefWidth="126.0" style="-fx-alignment: center;">
                                                    <children>
-                                                      <ImageView fx:id="rating" fitHeight="25.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
+                                                      <ImageView fx:id="rating" fitHeight="19.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
                                                             <Image url="@../restaurant/four.png" />
                                                          </image>
                                                       </ImageView>
                                                    </children>
                                                 </VBox>
-                                                <VBox prefHeight="24.0" prefWidth="49.0" style="-fx-alignment: center;">
+                                                <VBox prefHeight="24.0" prefWidth="47.0" style="-fx-alignment: center;">
                                                    <children>
-                                                      <Button mnemonicParsing="false" prefHeight="24.0" prefWidth="60.0" text="Reviews">
+                                                      <Button mnemonicParsing="false" prefHeight="24.0" prefWidth="58.0" text="Reviews">
                                                          <font>
                                                             <Font size="8.0" />
                                                          </font>
