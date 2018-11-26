@@ -10,6 +10,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.AnchorPane;
@@ -28,6 +29,8 @@ public class RatingController implements Initializable {
 	private AnchorPane root;
 	@FXML
 	private Text name;
+	@FXML
+	private ChoiceBox rate;
 	private String tempName;
 	private ObservableList<Review> observableRest;
 
