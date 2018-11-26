@@ -110,9 +110,9 @@ public class RestaurantListCell extends ListCell<Restaurant> {
 					Parent pane = null;
 					try {
 						FXMLLoader loader = new FXMLLoader(getClass().getResource("../detail/RestaurantDetail.fxml"));
+						pane = loader.load();
 						DetailController restaurantView = loader.getController();
 						restaurantView.changeInfo(item);
-						pane = loader.load();
 					} catch (IOException e) {
 
 					}

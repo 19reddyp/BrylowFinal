@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="detail.DetailController">
    <children>
       <Label layoutX="48.0" layoutY="7.0" text="RESTAURANT">
          <font>
@@ -42,105 +42,121 @@
          <children>
             <AnchorPane layoutX="14.0" layoutY="11.0" prefHeight="349.0" prefWidth="573.0" style="-fx-background-color: white;">
                <children>
-                  <ImageView fx:id="logo" fitHeight="112.0" fitWidth="125.0" layoutX="12.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../restaurant/Jersey.png" />
-                     </image>
-                  </ImageView>
-                  <HBox layoutX="156.0" layoutY="11.0" prefHeight="36.0" prefWidth="311.0" style="-fx-spacing: 20;">
+                  <VBox layoutX="16.0" layoutY="14.0" prefHeight="114.0" prefWidth="541.0" style="-fx-alignment: center;">
                      <children>
-                        <Text fx:id="name" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-                           <font>
-                              <Font size="21.0" />
-                           </font>
-                        </Text>
-                        <ImageView fx:id="rating" fitHeight="25.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../restaurant/four.png" />
-                           </image>
-                        </ImageView>
-                        <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="28.0" text="Add">
-                           <font>
-                              <Font size="7.0" />
-                           </font>
-                        </Button>
-                        <Text fx:id="price" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                     </children>
-                  </HBox>
-                  <VBox layoutX="156.0" layoutY="47.0" maxHeight="-Infinity" prefHeight="36.0" prefWidth="363.0" style="-fx-spacing: 10;">
-                     <children>
-                        <HBox prefHeight="54.0" prefWidth="683.0" style="-fx-spacing: 40;">
+                        <HBox prefHeight="112.0" prefWidth="541.0" style="-fx-spacing: 20;">
                            <children>
-                              <ImageView fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@address.png" />
-                                 </image>
-                              </ImageView>
-                              <Text fx:id="address" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-                                 <font>
-                                    <Font size="9.0" />
-                                 </font>
-                              </Text>
-                              <ImageView fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@phone.png" />
-                                 </image>
-                              </ImageView>
-                              <Text fx:id="phone" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-                                 <font>
-                                    <Font size="9.0" />
-                                 </font>
-                              </Text>
-                              <ImageView fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@email.png" />
-                                 </image>
-                              </ImageView>
-                              <Text fx:id="email" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-                                 <font>
-                                    <Font size="9.0" />
-                                 </font>
-                              </Text>
-                           </children>
-                        </HBox>
-                        <HBox prefHeight="54.0" prefWidth="683.0" style="-fx-spacing: 40;">
-                           <children>
-                              <ImageView fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@type.png" />
-                                 </image>
-                              </ImageView>
-                              <Text fx:id="type" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-                                 <font>
-                                    <Font size="9.0" />
-                                 </font>
-                              </Text>
-                              <ImageView fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@cuisine.png" />
-                                 </image>
-                              </ImageView>
-                              <Text fx:id="dining" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-                                 <font>
-                                    <Font size="9.0" />
-                                 </font>
-                              </Text>
-                              <ImageView fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@hours.png" />
-                                 </image>
-                              </ImageView>
-                              <Text fx:id="hours" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-                                 <font>
-                                    <Font size="9.0" />
-                                 </font>
-                              </Text>
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-alignment: center;">
+                                 <children>
+                                    <ImageView fx:id="logo" fitHeight="82.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../restaurant/Jersey.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                              <VBox maxHeight="-Infinity" prefHeight="106.0" prefWidth="405.0" style="-fx-spacing: 10;">
+                                 <children>
+                                    <HBox prefHeight="25.0" prefWidth="363.0" style="-fx-spacing: 20;">
+                                       <children>
+                                          <Text fx:id="name" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                                             <font>
+                                                <Font size="21.0" />
+                                             </font>
+                                          </Text>
+                                          <ImageView fx:id="rating" fitHeight="25.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../restaurant/four.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="28.0" text="Add">
+                                             <font>
+                                                <Font size="7.0" />
+                                             </font>
+                                          </Button>
+                                          <Text fx:id="price" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-spacing: 30;">
+                                       <children>
+                                          <ImageView fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@address.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Text fx:id="address" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="54.0" prefWidth="683.0" style="-fx-spacing: 30;">
+                                       <children>
+                                          <ImageView fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@phone.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Text fx:id="phone" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Text>
+                                          <ImageView fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@email.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Text fx:id="email" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="54.0" prefWidth="683.0" style="-fx-spacing: 30;">
+                                       <children>
+                                          <ImageView fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@type.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Text fx:id="type" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Text>
+                                          <ImageView fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@cuisine.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Text fx:id="dining" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Text>
+                                          <ImageView fitHeight="17.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@hours.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Text fx:id="hours" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
                            </children>
                         </HBox>
                      </children>
                   </VBox>
-                  <ListView layoutX="56.0" layoutY="118.0" prefHeight="200.0" prefWidth="200.0" />
-                  <ListView layoutX="312.0" layoutY="118.0" prefHeight="200.0" prefWidth="200.0" />
+                  <ListView layoutX="56.0" layoutY="170.0" prefHeight="148.0" prefWidth="200.0" />
+                  <ListView layoutX="312.0" layoutY="170.0" prefHeight="148.0" prefWidth="200.0" />
                </children>
             </AnchorPane>
          </children>
