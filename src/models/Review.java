@@ -9,7 +9,7 @@ public class Review implements Comparable<Review>{
 		explanation = xExplanation;
 	}
 	
-	public double getRating() {
+	public int getRating() {
 		return rating;
 	}
 	public void setRating(int rating) {
