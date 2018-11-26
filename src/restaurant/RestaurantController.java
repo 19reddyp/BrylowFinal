@@ -15,6 +15,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Callback;
 import models.ArraySortedList;
+import models.ArrayUnsortedList;
 import models.Item;
 import models.Restaurant;
 import models.Review;
@@ -29,16 +30,16 @@ public class RestaurantController implements Initializable {
 	public RestaurantController() {
 		observableRest = FXCollections.observableArrayList();
 		// add stuff from file to restList
-		ArraySortedList<Item> jmenu = new ArraySortedList<Item>();
-		ArraySortedList<Review> jreviews = new ArraySortedList<Review>();
+		ArrayUnsortedList<Item> jmenu = new ArrayUnsortedList<Item>();
+		ArrayUnsortedList<Review> jreviews = new ArrayUnsortedList<Review>();
 		jmenu.add(new Item("#8",7.85));
 		jmenu.add(new Item("#9",6.85));
 		jreviews.add(new Review(5,"good food"));
 		jreviews.add(new Review(5,"excellent experience"));
 		Restaurant temp = new Restaurant(0, "JERSEY MIKE'S", "17550 W Bluemound Rd #80, Brookfield, WI 53045", "(262) 262-2626", "jersey@mikes.com",
 				"M-F 8am-9pm", "Sandwiches", "Casual", "$", jmenu, jreviews,"restaurant/Jersey.png");
-		ArraySortedList<Item> fmenu = new ArraySortedList<Item>();
-		ArraySortedList<Review> freviews = new ArraySortedList<Review>();
+		ArrayUnsortedList<Item> fmenu = new ArrayUnsortedList<Item>();
+		ArrayUnsortedList<Review> freviews = new ArrayUnsortedList<Review>();
 		fmenu.add(new Item("Cheeseburger",9.95));
 		fmenu.add(new Item("Hamburger",8.85));
 		freviews.add(new Review(3,"good food"));
