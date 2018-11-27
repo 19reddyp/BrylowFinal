@@ -65,7 +65,7 @@ public class RatingListCell extends ListCell<Review> {
 			else
 				stars.setImage(new Image("rating/five.png"));
 			explain.setText(item.getExplanation());
-			explain.setWrappingWidth(150);
+			explain.setWrappingWidth(200);
 			stars.setPreserveRatio(true);
 			stars.setFitHeight(20);
 			VBox fors = new VBox(stars);
@@ -74,7 +74,7 @@ public class RatingListCell extends ListCell<Review> {
 			fors.setAlignment(Pos.CENTER);
 			fore.setAlignment(Pos.CENTER);
 			box = new HBox(fors,fore);
-			box.setSpacing(40);
+			box.setSpacing(10);
 			setGraphic(box);
 		}
 	}
