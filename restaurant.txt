@@ -62,3 +62,29 @@ very good
 !!
 5
 excellent experience
+!!!!!
+2
+PANERA BREAD
+2095 North Calhoun Road Brookfield, WI 53005
+(262) 641-9999
+panera@panera.com
+Mon-Sun 5:30am-9:00pm
+Sandwiches
+Casual
+$
+restaurant/Panera.jpg
+!
+Bacon Turkey Bravo
+8.95
+!
+Mac and Cheese
+7.99
+!!
+1
+asdas
+!!
+4
+great atmosphere
+!!
+5
+good mac and cheese
