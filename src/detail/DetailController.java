@@ -81,7 +81,7 @@ public class DetailController implements Initializable{
 	}
 	@FXML
 	private void redirect(ActionEvent event) throws IOException {
-		FXMLLoader page = new FXMLLoader(getClass().getResource("restaurant/Restaurants.fxml"));
+		FXMLLoader page = new FXMLLoader(getClass().getResource("../restaurant/Restaurants.fxml"));
 		AnchorPane pane = page.load();
 		DatabaseClass data = new DatabaseClass();
 		ArrayUnsortedList<Restaurant> rest = data.getRestaraunts();

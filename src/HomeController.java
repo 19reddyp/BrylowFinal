@@ -29,7 +29,7 @@ public class HomeController {
 	private TextField term;
 	@FXML
 	public void home(ActionEvent event) throws IOException{
-		FXMLLoader page = new FXMLLoader(getClass().getResource("../Home.fxml"));
+		FXMLLoader page = new FXMLLoader(getClass().getResource("Home.fxml"));
 		AnchorPane pane = page.load();
 		root.getChildren().setAll(pane);
 	}
