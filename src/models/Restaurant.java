@@ -146,4 +146,7 @@ public class Restaurant {
 	public ArrayUnsortedList<Review> getReview(){
 		return reviews;
 	}
+	public ArrayUnsortedList<Item> getMenu(){
+		return menu;
+	}
 }
