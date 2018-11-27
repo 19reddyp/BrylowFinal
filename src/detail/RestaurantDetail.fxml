@@ -180,8 +180,8 @@
                         </HBox>
                      </children>
                   </VBox>
-                  <ListView layoutX="56.0" layoutY="170.0" prefHeight="148.0" prefWidth="200.0" />
-                  <ListView layoutX="312.0" layoutY="170.0" prefHeight="148.0" prefWidth="200.0" />
+                  <ListView fx:id="menu" layoutX="140.0" layoutY="159.0" prefHeight="185.0" prefWidth="293.0" />
+                  <Label layoutX="265.0" layoutY="142.0" text="MENU:" />
                </children>
             </AnchorPane>
          </children>
