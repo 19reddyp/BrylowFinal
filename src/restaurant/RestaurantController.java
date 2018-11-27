@@ -31,10 +31,17 @@ public class RestaurantController implements Initializable {
 	public RestaurantController() {
 		observableRest = FXCollections.observableArrayList();
 		DatabaseClass data = new DatabaseClass();
-		ArrayUnsortedList<Restaurant> temp = data.getRestaraunts();
-		for(int x=0; x<temp.size(); x++) {
-			observableRest.add(temp.getNext());
+		ArrayUnsortedList<Restaurant> temp;
+		try {
+			temp = data.getRestaraunts();
+			for(int x=0; x<temp.size(); x++) {
+				observableRest.add(temp.getNext());
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+		
 	}
 
 	@Override

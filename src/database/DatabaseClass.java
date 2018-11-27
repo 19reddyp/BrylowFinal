@@ -14,11 +14,10 @@ public class DatabaseClass {
 
 	}
 
-	public ArrayUnsortedList<Restaurant> getRestaraunts() {
-
-		String location = "restaurant.txt";
+	public ArrayUnsortedList<Restaurant> getRestaraunts() throws IOException {
+		File temp = new File("restaurant.txt");
 		ArrayUnsortedList<Restaurant> list = new ArrayUnsortedList<Restaurant>();
-		Scanner file = new Scanner(location);
+		Scanner file = new Scanner(temp);
 		int id;
 		String name;
 		String address;
@@ -33,7 +32,7 @@ public class DatabaseClass {
 		ArrayUnsortedList<Review> reviews;
 		if (file.hasNextLine()) {
 			String test = file.nextLine();
-			while (test != null) {
+			while (file.hasNextLine()) {
 				if (test.equals("!!!!!")) {
 					String xId = file.nextLine();
 					id = Integer.parseInt(xId);
@@ -45,7 +44,7 @@ public class DatabaseClass {
 					cuisine = file.nextLine();
 					type = file.nextLine();
 					price = file.nextLine();
-					imageURL = " ";
+					imageURL = file.nextLine();
 					test = file.nextLine();
 					menu = new ArrayUnsortedList<Item>();
 					while (test.equals("!")) {
@@ -54,7 +53,12 @@ public class DatabaseClass {
 						String xCost = file.nextLine();
 						double cost = Double.parseDouble(xCost);
 						menu.add(new Item(itemName, cost));
-						test = file.nextLine();
+						if(file.hasNextLine()) {
+							test = file.nextLine();
+						}else {
+							break;
+						}
+						
 					}
 					reviews = new ArrayUnsortedList<Review>();
 					while (test.equals("!!")) {
@@ -62,7 +66,11 @@ public class DatabaseClass {
 						String review = file.nextLine();
 						int rating = Integer.parseInt(xRating);
 						reviews.add(new Review(rating, review));
-						test = file.nextLine();
+						if(file.hasNextLine()) {
+							test = file.nextLine();
+						}else {
+							break;
+						}
 					}
 					list.add(new Restaurant(id, name, address, phone, email, hours, cuisine, type, price, menu, reviews,
 							imageURL));
