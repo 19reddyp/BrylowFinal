@@ -80,6 +80,8 @@ public class DetailController {
 		review.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
+				Stage temp = (Stage) ((Node) event.getSource()).getScene().getWindow();
+				temp.close();
 				Parent pane = null;
 				try {
 					FXMLLoader loader = new FXMLLoader(getClass().getResource("../rating/Rating.fxml"));

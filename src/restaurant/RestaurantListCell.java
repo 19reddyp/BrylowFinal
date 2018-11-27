@@ -8,6 +8,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -108,6 +109,8 @@ public class RestaurantListCell extends ListCell<Restaurant> {
 				@Override
 				public void handle(ActionEvent event) {
 					Parent pane = null;
+					Stage temp = (Stage) ((Node) event.getSource()).getScene().getWindow();
+					temp.close();
 					try {
 						FXMLLoader loader = new FXMLLoader(getClass().getResource("../detail/RestaurantDetail.fxml"));
 						pane = loader.load();
