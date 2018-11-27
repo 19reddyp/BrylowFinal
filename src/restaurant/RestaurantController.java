@@ -30,22 +30,18 @@ public class RestaurantController implements Initializable {
 
 	public RestaurantController() {
 		observableRest = FXCollections.observableArrayList();
-		DatabaseClass data = new DatabaseClass();
-		ArrayUnsortedList<Restaurant> temp;
-		try {
-			temp = data.getRestaraunts();
-			for(int x=0; x<temp.size(); x++) {
-				observableRest.add(temp.getNext());
-			}
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+
+	}
+
+	public void setList(ArrayUnsortedList<Restaurant> temp) throws IOException {
+		for (int x = 0; x < temp.size(); x++) {
+			observableRest.add(temp.getNext());
 		}
-		
 	}
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		
 		list.setItems(observableRest);
 		list.setCellFactory(restaurantList -> new RestaurantListCell());
 	}
