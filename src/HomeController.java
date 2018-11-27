@@ -27,7 +27,12 @@ public class HomeController {
 
 	@FXML
 	private TextField term;
-
+	@FXML
+	public void home(ActionEvent event) throws IOException{
+		FXMLLoader page = new FXMLLoader(getClass().getResource("../Home.fxml"));
+		AnchorPane pane = page.load();
+		root.getChildren().setAll(pane);
+	}
 	@FXML
 	private void redirect(ActionEvent event) throws IOException {
 		FXMLLoader page = new FXMLLoader(getClass().getResource("restaurant/Restaurants.fxml"));

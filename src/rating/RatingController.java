@@ -31,6 +31,7 @@ import models.ArrayUnsortedList;
 import models.Item;
 import models.Restaurant;
 import models.Review;
+import restaurant.RestaurantController;
 
 public class RatingController implements Initializable {
 	@FXML
@@ -61,7 +62,22 @@ public class RatingController implements Initializable {
 		list.setItems(observableRest);
 		list.setCellFactory(rating -> new RatingListCell());
 	}
-
+	@FXML
+	public void home(ActionEvent event) throws IOException{
+		FXMLLoader page = new FXMLLoader(getClass().getResource("../Home.fxml"));
+		AnchorPane pane = page.load();
+		root.getChildren().setAll(pane);
+	}
+	@FXML
+	private void redirect(ActionEvent event) throws IOException {
+		FXMLLoader page = new FXMLLoader(getClass().getResource("restaurant/Restaurants.fxml"));
+		AnchorPane pane = page.load();
+		DatabaseClass data = new DatabaseClass();
+		ArrayUnsortedList<Restaurant> rest = data.getRestaraunts();
+		RestaurantController controller = page.getController();
+		controller.setList(rest);
+		root.getChildren().setAll(pane);
+	}
 	public void addList(Restaurant temp) {
 		restaurant = temp;
 		name.setText(temp.getName());

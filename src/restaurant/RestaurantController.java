@@ -38,7 +38,22 @@ public class RestaurantController implements Initializable {
 			observableRest.add(temp.getNext());
 		}
 	}
-
+	@FXML
+	public void home(ActionEvent event) throws IOException{
+		FXMLLoader page = new FXMLLoader(getClass().getResource("../Home.fxml"));
+		AnchorPane pane = page.load();
+		root.getChildren().setAll(pane);
+	}
+	@FXML
+	private void redirect(ActionEvent event) throws IOException {
+		FXMLLoader page = new FXMLLoader(getClass().getResource("restaurant/Restaurants.fxml"));
+		AnchorPane pane = page.load();
+		DatabaseClass data = new DatabaseClass();
+		ArrayUnsortedList<Restaurant> rest = data.getRestaraunts();
+		RestaurantController controller = page.getController();
+		controller.setList(rest);
+		root.getChildren().setAll(pane);
+	}
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		

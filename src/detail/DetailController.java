@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import database.DatabaseClass;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -25,6 +26,7 @@ import models.ArrayUnsortedList;
 import models.Item;
 import models.Restaurant;
 import rating.RatingController;
+import restaurant.RestaurantController;
 
 public class DetailController implements Initializable{
 	@FXML
@@ -70,6 +72,22 @@ public class DetailController implements Initializable{
 		email = new Text();
 		hours = new Text();
 		review = new Button();
+	}
+	@FXML
+	public void home(ActionEvent event) throws IOException{
+		FXMLLoader page = new FXMLLoader(getClass().getResource("../Home.fxml"));
+		AnchorPane pane = page.load();
+		root.getChildren().setAll(pane);
+	}
+	@FXML
+	private void redirect(ActionEvent event) throws IOException {
+		FXMLLoader page = new FXMLLoader(getClass().getResource("restaurant/Restaurants.fxml"));
+		AnchorPane pane = page.load();
+		DatabaseClass data = new DatabaseClass();
+		ArrayUnsortedList<Restaurant> rest = data.getRestaraunts();
+		RestaurantController controller = page.getController();
+		controller.setList(rest);
+		root.getChildren().setAll(pane);
 	}
 	public void changeInfo(Restaurant toDisplay) {
 		ArrayUnsortedList<Item> menu = toDisplay.getMenu();
