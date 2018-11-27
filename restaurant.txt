@@ -4,7 +4,7 @@ JERSEY MIKE'S
 17550 W Bluemound Rd #80, Brookfield, WI 53045
 (262) 262-2626
 jersey@mikes.com
-M-F 8am-9pm
+Mon-Sun 8:00am-9:00pm
 Sandwiches
 Casual
 $
@@ -27,7 +27,7 @@ FIVE GUYS
 95 N. Moorland Rd, Brookfield, WI 53005
 (262) 786-2580
 five@guys.com
-M-F 8am-10pm
+Mon-Sun 8:00am-10:00pm
 Burgers
 Casual
 $
@@ -44,3 +44,26 @@ good food
 !!
 5
 excellent experience
+!!!!!
+2
+PANERA BREAD
+2095 North Calhoun Road Brookfield, WI 53005
+(262) 641-9999
+panera@panera.com
+Mon-Sun 5:30am-9:00pm
+Sandwiches
+Casual
+$
+restaurant/Panera.jpg
+!
+Bacon Turkey Bravo
+8.95
+!
+Mac and Cheese
+7.99
+!!
+4
+great atmosphere
+!!
+5
+good mac and cheese
