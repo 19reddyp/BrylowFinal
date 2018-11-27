@@ -37,33 +37,23 @@ public class RatingController implements Initializable {
 	public RatingController() {
 		observableRest = FXCollections.observableArrayList();
 		// add stuff from file to restList
-		ArrayUnsortedList<Item> jmenu = new ArrayUnsortedList<Item>();
-		ArrayUnsortedList<Review> jreviews = new ArrayUnsortedList<Review>();
-		jmenu.add(new Item("#8", 7.85));
-		jmenu.add(new Item("#9", 6.85));
-		jreviews.add(new Review(4, "good food"));
-		jreviews.add(new Review(3, "excellent experience"));
-		Restaurant temp = new Restaurant(0, "JERSEY MIKE'S", "17550 W Bluemound Rd #80, Brookfield, WI 53045",
-				"(262) 262-2626", "jersey@mikes.com", "M-F 8am-9pm", "Sandwiches", "Casual", "$", jmenu, jreviews,
-				"restaurant/Jersey.png");
-		ArrayUnsortedList<Review> temp2 = temp.getReview();
-		for (int x = 0; x < temp2.size(); x++) {
-			observableRest.add(temp2.getNext());
-		}
-		tempName = temp.getName();
 	}
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		list.setItems(observableRest);
 		list.setCellFactory(rating -> new RatingListCell());
-		this.setName(tempName);
 	}
 
-	public void setName(String x) {
-		name.setText(x);
+	public void addList(Restaurant temp) {
+		name.setText(temp.getName());
+		ArrayUnsortedList<Review> reviews = temp.getReview();
+		for (int x = 0; x < reviews.size(); x++) {
+			observableRest.add(reviews.getNext());
+		}
 	}
+
 	public void writeReview() {
-		
+
 	}
 }

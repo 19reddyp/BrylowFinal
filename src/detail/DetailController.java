@@ -1,14 +1,22 @@
 package detail;
 
+import java.io.IOException;
+
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import models.Restaurant;
+import rating.RatingController;
 
 public class DetailController {
 	@FXML
@@ -33,6 +41,8 @@ public class DetailController {
 	private Text hours;
 	@FXML
 	protected AnchorPane root;
+	@FXML
+	private Button review;
 
 	public DetailController() {
 		logo = new ImageView();
@@ -45,6 +55,7 @@ public class DetailController {
 		phone = new Text();
 		email = new Text();
 		hours = new Text();
+		review = new Button();
 	}
 	public void changeInfo(Restaurant toDisplay) {
 		logo.setImage(new Image(toDisplay.getImageURL()));
@@ -66,6 +77,24 @@ public class DetailController {
 		phone.setText(toDisplay.getPhone());
 		email.setText(toDisplay.getEmail());
 		hours.setText(toDisplay.getHours());
+		review.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				Parent pane = null;
+				try {
+					FXMLLoader loader = new FXMLLoader(getClass().getResource("../rating/Rating.fxml"));
+					pane = loader.load();
+					RatingController ratings = loader.getController();
+					ratings.addList(toDisplay);
+				} catch (IOException e) {
+
+				}
+				Scene table = new Scene(pane);
+				Stage x = new Stage();
+				x.setScene(table);
+				x.show();
+			}
+		});
 	}
 
 }
