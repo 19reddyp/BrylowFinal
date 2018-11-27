@@ -16,6 +16,9 @@ restaurant/Jersey.png
 #9
 6.85
 !!
+4
+jersey mikes 4 star
+!!
 1
 good food
 !!
@@ -38,6 +41,9 @@ Cheeseburger
 !
 Hamburger
 8.85
+!!
+2
+five guys 2 star
 !!
 3
 good food

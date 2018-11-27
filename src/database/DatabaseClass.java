@@ -103,6 +103,7 @@ public class DatabaseClass {
 			for(int i = indexOfRestaurant + 1; i < info.size(); i++) {
 				if(info.get(i).equals("!!!!!") || info.get(i).equals("!!")) {
 					indexOfReviews = i;
+					break;
 				}
 			}
 			info.add(indexOfReviews, review);
