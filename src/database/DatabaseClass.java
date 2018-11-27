@@ -11,7 +11,6 @@ import models.Review;
 
 public class DatabaseClass {
 	public DatabaseClass() {
-
 	}
 
 	public ArrayUnsortedList<Restaurant> getRestaraunts() throws IOException {
@@ -53,12 +52,12 @@ public class DatabaseClass {
 						String xCost = file.nextLine();
 						double cost = Double.parseDouble(xCost);
 						menu.add(new Item(itemName, cost));
-						if(file.hasNextLine()) {
+						if (file.hasNextLine()) {
 							test = file.nextLine();
-						}else {
+						} else {
 							break;
 						}
-						
+
 					}
 					reviews = new ArrayUnsortedList<Review>();
 					while (test.equals("!!")) {
@@ -66,18 +65,24 @@ public class DatabaseClass {
 						String review = file.nextLine();
 						int rating = Integer.parseInt(xRating);
 						reviews.add(new Review(rating, review));
-						if(file.hasNextLine()) {
+						if (file.hasNextLine()) {
 							test = file.nextLine();
-						}else {
+						} else {
 							break;
 						}
 					}
 					list.add(new Restaurant(id, name, address, phone, email, hours, cuisine, type, price, menu, reviews,
 							imageURL));
-
 				}
 			}
 		}
 		return list;
 	}
+	
+	public void addReview() throws IOException {
+		File temp = new File("restaurant.txt");
+		Scanner file = new Scanner(temp);
+		
+	}
+	
 }
