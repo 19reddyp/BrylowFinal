@@ -20,6 +20,8 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -43,6 +45,8 @@ public class RatingController implements Initializable {
 	private TextArea explain;
 	@FXML
 	private Button submit;
+	@FXML
+	private ImageView overall;
 	private String tempName;
 	private ObservableList<Review> observableRest;
 	private Restaurant restaurant;
@@ -61,6 +65,16 @@ public class RatingController implements Initializable {
 	public void addList(Restaurant temp) {
 		restaurant = temp;
 		name.setText(temp.getName());
+		if (temp.getRating() == 1)
+			overall.setImage(new Image("rating/one.png"));
+		else if (temp.getRating() == 2)
+			overall.setImage(new Image("rating/two.png"));
+		else if (temp.getRating() == 3)
+			overall.setImage(new Image("rating/three.png"));
+		else if (temp.getRating() == 4)
+			overall.setImage(new Image("rating/four.png"));
+		else
+			overall.setImage(new Image("rating/five.png"));
 		ArrayUnsortedList<Review> reviews = temp.getReview();
 		for (int x = 0; x < reviews.size(); x++) {
 			observableRest.add(reviews.getNext());
@@ -82,14 +96,14 @@ public class RatingController implements Initializable {
 					pane = loader.load();
 					DatabaseClass database2 = new DatabaseClass();
 					ArrayUnsortedList<Restaurant> newList = database2.getRestaraunts();
-					for(int x=0; x<newList.size();x++) {
+					for (int x = 0; x < newList.size(); x++) {
 						Restaurant temp = newList.getNext();
-						if(restaurant.getName().equals(temp.getName())) {
+						if (restaurant.getName().equals(temp.getName())) {
 							RatingController ratings = loader.getController();
 							ratings.addList(temp);
 						}
 					}
-				
+
 				} catch (IOException e) {
 
 				}
@@ -108,6 +122,6 @@ public class RatingController implements Initializable {
 		int rating = Integer.parseInt(xRating);
 		String text = explain.getText();
 		database.addReview(restID, rating, text);
-		
+
 	}
 }
