@@ -52,4 +52,11 @@ public class LoginController {
 		}
 
 	}
+	
+	@FXML
+	public void redirectNewAccount(ActionEvent event) throws IOException {
+		FXMLLoader page = new FXMLLoader(getClass().getResource("../newAccount/NewAccount.fxml"));
+		AnchorPane pane = page.load();
+		root.getChildren().setAll(pane);
+	}
 }
