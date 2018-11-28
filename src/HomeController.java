@@ -74,7 +74,7 @@ public class HomeController {
 		SignOutConfirmationController controller = page.getController();
 		Stage temp = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		controller.setStage(temp);
-		Scene scene = new Scene(root);
+		Scene scene = new Scene(pane);
 		Stage temp2 = new Stage();
 		temp2.setTitle("Restaurant Advisor");
 		temp2.setScene(scene);
