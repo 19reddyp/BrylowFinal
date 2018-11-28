@@ -102,8 +102,8 @@ public class RestaurantListCell extends ListCell<Restaurant> {
 				ratings.setImage(new Image("restaurant/five.png"));
 			ratings.setPreserveRatio(true);
 			ratings.setFitHeight(18);
-			box.setSpacing(50);
-			open.setText("Details");
+			box.setSpacing(25);
+			open.setText("DETAILS");
 			open.setStyle("-fx-background-color: #aaaaaa; -fx-border-color: black");
 			open.setOnAction(new EventHandler<ActionEvent>() {
 				@Override
