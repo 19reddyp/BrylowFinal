@@ -7,12 +7,25 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="detail.DetailController">
    <children>
+    <Pane layoutX="-7.0" layoutY="-8.0" prefHeight="50.0" prefWidth="600.0" style="-fx-background-color: white;">
+         <children>
+            <Button layoutX="8.0" layoutY="9.0" mnemonicParsing="false" onAction="#home" prefHeight="36.0" prefWidth="48.0" style="-fx-border-color: white; -fx-background-color: white;">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children></Pane>
       <Label layoutX="48.0" layoutY="7.0" text="RESTAURANT">
          <font>
             <Font name="System Bold" size="23.0" />
@@ -23,11 +36,6 @@
             <Font name="System Bold" size="23.0" />
          </font>
       </Label>
-      <ImageView fitHeight="28.0" fitWidth="33.0" layoutX="11.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../images/icon.png" />
-         </image>
-      </ImageView>
       <ImageView fitHeight="28.0" fitWidth="33.0" layoutX="515.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/avatar.png" />
@@ -38,6 +46,15 @@
             <Image url="@../../images/shopping-cart.png" />
          </image>
       </ImageView>
+      <Button layoutX="460.0" layoutY="1.0" mnemonicParsing="false" onAction="#redirect" prefHeight="36.0" prefWidth="48.0" style="-fx-border-color: white; -fx-background-color: white;">
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="33.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/shop.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
       <AnchorPane layoutY="40.0" prefHeight="371.0" prefWidth="600.0" style="-fx-background-color: black;">
          <children>
             <AnchorPane layoutX="14.0" layoutY="11.0" prefHeight="349.0" prefWidth="573.0" style="-fx-background-color: white;">
@@ -79,9 +96,9 @@
                                                       </ImageView>
                                                    </children>
                                                 </VBox>
-                                                <VBox prefHeight="24.0" prefWidth="47.0" style="-fx-alignment: center;">
+                                                <VBox prefHeight="24.0" prefWidth="53.0" style="-fx-alignment: center;">
                                                    <children>
-                                                      <Button mnemonicParsing="false" prefHeight="24.0" prefWidth="58.0" text="Reviews">
+                                                      <Button fx:id="review" mnemonicParsing="false" prefHeight="24.0" prefWidth="58.0" text="REVIEWS">
                                                          <font>
                                                             <Font size="8.0" />
                                                          </font>
@@ -180,8 +197,8 @@
                         </HBox>
                      </children>
                   </VBox>
-                  <ListView layoutX="56.0" layoutY="170.0" prefHeight="148.0" prefWidth="200.0" />
-                  <ListView layoutX="312.0" layoutY="170.0" prefHeight="148.0" prefWidth="200.0" />
+                  <ListView fx:id="menu" layoutX="140.0" layoutY="159.0" prefHeight="185.0" prefWidth="293.0" />
+                  <Label layoutX="265.0" layoutY="142.0" text="MENU:" />
                </children>
             </AnchorPane>
          </children>

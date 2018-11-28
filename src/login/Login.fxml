@@ -19,16 +19,16 @@
       </ImageView>
       <AnchorPane layoutX="166.0" layoutY="68.0" prefHeight="173.0" prefWidth="274.0" style="-fx-background-color: white;">
          <children>
+         <TextField fx:id="user" layoutX="66.0" layoutY="41.0">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </TextField>
             <PasswordField fx:id="pass" layoutX="66.0" layoutY="85.0">
                <font>
                   <Font size="11.0" />
                </font>
             </PasswordField>
-            <TextField fx:id="user" layoutX="66.0" layoutY="41.0">
-               <font>
-                  <Font size="11.0" />
-               </font>
-            </TextField>
             <Button fx:id="button" layoutX="104.0" layoutY="132.0" mnemonicParsing="false" onAction="#login" text="SIGN IN" textOverrun="CLIP" />
             <Label layoutX="66.0" layoutY="24.0" text="EMAIL ADDRESS">
                <font>

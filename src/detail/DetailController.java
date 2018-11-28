@@ -1,16 +1,34 @@
 package detail;
 
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import database.DatabaseClass;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import models.ArrayUnsortedList;
+import models.Item;
 import models.Restaurant;
+import rating.RatingController;
+import restaurant.RestaurantController;
 
-public class DetailController {
+public class DetailController implements Initializable{
 	@FXML
 	private ImageView logo;
 	@FXML
@@ -33,8 +51,16 @@ public class DetailController {
 	private Text hours;
 	@FXML
 	protected AnchorPane root;
+	@FXML
+	private Button review;
+	@FXML
+	private ListView<Item> menu;
+	private ObservableList<Item> menuList;
+
 
 	public DetailController() {
+		menuList = FXCollections.observableArrayList();
+		menu = new ListView<Item>();
 		logo = new ImageView();
 		rating = new ImageView();
 		name = new Text();
@@ -45,8 +71,29 @@ public class DetailController {
 		phone = new Text();
 		email = new Text();
 		hours = new Text();
+		review = new Button();
+	}
+	@FXML
+	public void home(ActionEvent event) throws IOException{
+		FXMLLoader page = new FXMLLoader(getClass().getResource("../Home.fxml"));
+		AnchorPane pane = page.load();
+		root.getChildren().setAll(pane);
+	}
+	@FXML
+	private void redirect(ActionEvent event) throws IOException {
+		FXMLLoader page = new FXMLLoader(getClass().getResource("../restaurant/Restaurants.fxml"));
+		AnchorPane pane = page.load();
+		DatabaseClass data = new DatabaseClass();
+		ArrayUnsortedList<Restaurant> rest = data.getRestaraunts();
+		RestaurantController controller = page.getController();
+		controller.setList(rest);
+		root.getChildren().setAll(pane);
 	}
 	public void changeInfo(Restaurant toDisplay) {
+		ArrayUnsortedList<Item> menu = toDisplay.getMenu();
+		for(int x=0; x<menu.size(); x++) {
+			menuList.add(menu.getNext());
+		}
 		logo.setImage(new Image(toDisplay.getImageURL()));
 		if (toDisplay.getRating() == 1)
 			rating.setImage(new Image("detail/one.png"));
@@ -66,6 +113,31 @@ public class DetailController {
 		phone.setText(toDisplay.getPhone());
 		email.setText(toDisplay.getEmail());
 		hours.setText(toDisplay.getHours());
+		review.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				Stage temp = (Stage) ((Node) event.getSource()).getScene().getWindow();
+				temp.close();
+				Parent pane = null;
+				try {
+					FXMLLoader loader = new FXMLLoader(getClass().getResource("../rating/Rating.fxml"));
+					pane = loader.load();
+					RatingController ratings = loader.getController();
+					ratings.addList(toDisplay);
+				} catch (IOException e) {
+
+				}
+				Scene table = new Scene(pane);
+				Stage x = new Stage();
+				x.setScene(table);
+				x.show();
+			}
+		});
+	}
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		menu.setItems(menuList);
+		menu.setCellFactory(menuLists -> new MenuListCell());
 	}
 
 }

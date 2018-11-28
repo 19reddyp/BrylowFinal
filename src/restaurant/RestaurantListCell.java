@@ -8,6 +8,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -101,13 +102,15 @@ public class RestaurantListCell extends ListCell<Restaurant> {
 				ratings.setImage(new Image("restaurant/five.png"));
 			ratings.setPreserveRatio(true);
 			ratings.setFitHeight(18);
-			box.setSpacing(50);
-			open.setText("Details");
+			box.setSpacing(25);
+			open.setText("DETAILS");
 			open.setStyle("-fx-background-color: #aaaaaa; -fx-border-color: black");
 			open.setOnAction(new EventHandler<ActionEvent>() {
 				@Override
 				public void handle(ActionEvent event) {
 					Parent pane = null;
+					Stage temp = (Stage) ((Node) event.getSource()).getScene().getWindow();
+					temp.close();
 					try {
 						FXMLLoader loader = new FXMLLoader(getClass().getResource("../detail/RestaurantDetail.fxml"));
 						pane = loader.load();

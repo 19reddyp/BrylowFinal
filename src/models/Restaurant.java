@@ -143,4 +143,10 @@ public class Restaurant {
 		int avg = (int) count / num;
 		return avg;
 	}
+	public ArrayUnsortedList<Review> getReview(){
+		return reviews;
+	}
+	public ArrayUnsortedList<Item> getMenu(){
+		return menu;
+	}
 }
