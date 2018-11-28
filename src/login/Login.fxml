@@ -29,7 +29,7 @@
                   <Font size="11.0" />
                </font>
             </PasswordField>
-            <Button fx:id="button" layoutX="65.0" layoutY="127.0" mnemonicParsing="false" onAction="#login" text="SIGN IN" textOverrun="CLIP" />
+            <Button fx:id="button" layoutX="75.0" layoutY="125.0" mnemonicParsing="false" onAction="#login" text="SIGN IN" textOverrun="CLIP" />
             <Label layoutX="27.0" layoutY="19.0" text="EMAIL ADDRESS">
                <font>
                   <Font name="System Bold Italic" size="13.0" />
@@ -40,7 +40,7 @@
                   <Font name="System Bold Italic" size="13.0" />
                </font>
             </Label>
-            <Text fx:id="fapa" fill="RED" layoutX="61.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="152.99998819828033" />
+            <Text fx:id="fapa" fill="RED" layoutX="31.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="152.99998819828033" />
             <Button layoutX="256.0" layoutY="78.0" mnemonicParsing="false" onAction="#redirectNewAccount" prefHeight="27.0" prefWidth="75.0" text="SIGN UP" />
             <Label layoutX="242.0" layoutY="28.0" prefHeight="38.0" prefWidth="103.0" style="-fx-wrap-text: true; -fx-text-alignment: center;" text="DON'T HAVE AN ACCOUNT?">
                <font>
