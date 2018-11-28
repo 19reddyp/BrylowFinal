@@ -103,7 +103,7 @@
 								</FXCollections>
 							</items>
 						</ChoiceBox>
-						<TextArea fx:id="explain" layoutX="411.0" layoutY="94.0" prefHeight="210.0" prefWidth="153.0" />
+						<TextArea fx:id="explain" layoutX="411.0" layoutY="94.0" prefHeight="210.0" prefWidth="153.0" style="-fx-wrap-text: true;" />
 						<Button fx:id="submit" layoutX="463.0" layoutY="310.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="56.0" text="SUBMIT">
 							<font>
 								<Font size="10.0" />

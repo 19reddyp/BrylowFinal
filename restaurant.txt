@@ -19,7 +19,7 @@ restaurant/Jersey.png
 4
 jersey mikes 4 star
 !!
-1
+4
 good food
 !!
 5
@@ -42,28 +42,16 @@ Cheeseburger
 Hamburger
 8.85
 !!
+4
+Excellent location. My go to when I am craving burgers.
+!!
 5
-ads
-!!
-2
-five guys 2 star
-!!
-3
-good food
-!!
-4
-hello world testing
-!!
-4
-hello world testing
-!!
-3
-asdass
+Five Guys consistently delivers a good hamburger and fries. I like the amount of customizing I can do to my burger. The choices of trimmings is impressive.
 !!
 5
 very good
 !!
-5
+4
 excellent experience
 !!!!!
 2
@@ -85,9 +73,6 @@ Mac and Cheese
 !!
 4
 good
-!!
-1
-asdas
 !!
 4
 great atmosphere
@@ -111,6 +96,9 @@ Burrito
 !
 Tacos
 7.89
+!!
+5
+It's been year since I was inside a Chipotle and it was delicious will make a point of going more often when looking for a quick place to go and eat
 !!
 4
 good
