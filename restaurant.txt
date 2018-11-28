@@ -42,6 +42,9 @@ Cheeseburger
 Hamburger
 8.85
 !!
+5
+ads
+!!
 2
 five guys 2 star
 !!
@@ -91,3 +94,26 @@ great atmosphere
 !!
 5
 good mac and cheese
+!!!!!
+3
+CHIPOTLE
+15375 W Bluemound Rd #170, Brookfield, WI 53005
+(262) 796-0463
+chipotle@grill.com
+Mon-Sun 10:45am-10:00pm
+Mexican
+Casual
+$
+restaurant/Chipotle.jpg
+!
+Burrito
+8.75
+!
+Tacos
+7.89
+!!
+4
+good
+!!
+4
+great atmosphere
