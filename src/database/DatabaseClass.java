@@ -114,4 +114,15 @@ public class DatabaseClass {
 		}
 	}
 
+	public void addNewAccount(String username, String password) throws IOException {
+		File temp = new File("logindata.txt");
+		Scanner file = new Scanner(temp);
+		ArrayList<String> info = new ArrayList<String>();
+		while (file.hasNextLine()) {
+			info.add(file.nextLine());
+		}
+		info.add(info.size(), username + " " + password);
+		Path path = Paths.get("logindata.txt");
+		Files.write(path, info, Charset.defaultCharset());
+	}
 }

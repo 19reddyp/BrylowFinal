@@ -62,4 +62,8 @@ public class HomeController {
 		controller.setList(fit);
 		root.getChildren().setAll(pane);
 	}
+	@FXML
+	public void redirectNewAccount(ActionEvent event) throws IOException {
+		
+	}
 }
