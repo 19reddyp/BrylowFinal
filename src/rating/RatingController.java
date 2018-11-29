@@ -61,6 +61,7 @@ public class RatingController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		list.setItems(observableRest);
 		list.setCellFactory(rating -> new RatingListCell());
+		rate.getSelectionModel().selectFirst();
 	}
 	@FXML
 	public void home(ActionEvent event) throws IOException{
