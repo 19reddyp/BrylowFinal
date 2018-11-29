@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.String?>
 <?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.Button?>
@@ -16,7 +22,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rating.RatingController">
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rating.RatingController">
 	<children>
 	 <Pane layoutX="-7.0" layoutY="-8.0" prefHeight="50.0" prefWidth="600.0" style="-fx-background-color: white;">
          <children>
@@ -67,7 +73,7 @@
 			<children>
 				<AnchorPane layoutX="14.0" layoutY="11.0" prefHeight="349.0" prefWidth="573.0" style="-fx-background-color: white;">
 					<children>
-						<ListView fx:id="list" layoutX="9.0" layoutY="42.0" prefHeight="293.0" prefWidth="394.0" />
+						<ListView fx:id="list" layoutX="9.0" layoutY="42.0" prefHeight="287.0" prefWidth="394.0" />
 						<HBox layoutX="10.0" layoutY="7.0" prefHeight="42.0" prefWidth="453.0">
 							<children>
 								<VBox prefHeight="200.0" prefWidth="100.0" style="-fx-alignment: center;">
@@ -113,6 +119,11 @@
 								<Font size="10.0" />
 							</font>
 						</Button>
+                  <Text layoutX="119.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reviews from Yelp and Consumer Affairs">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </Text>
 					</children>
 				</AnchorPane>
 			</children>

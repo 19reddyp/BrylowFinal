@@ -65,11 +65,11 @@ public class RatingListCell extends ListCell<Review> {
 			else
 				stars.setImage(new Image("rating/five.png"));
 			explain.setText(item.getExplanation());
-			explain.setWrappingWidth(200);
+			explain.setWrappingWidth(220);
 			stars.setPreserveRatio(true);
 			stars.setFitHeight(20);
 			VBox fors = new VBox(stars);
-			fors.setPrefWidth(150);
+			fors.setPrefWidth(130);
 			VBox fore = new VBox(explain);
 			fors.setAlignment(Pos.CENTER);
 			fore.setAlignment(Pos.CENTER);
