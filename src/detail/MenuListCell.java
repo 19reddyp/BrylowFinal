@@ -1,6 +1,7 @@
 package detail;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
 
 import detail.DetailController;
 import javafx.event.ActionEvent;
@@ -52,7 +53,10 @@ public class MenuListCell extends ListCell<Item> {
 			name = new Text();
 			price = new Text();
 			name.setText(item.getName());
-			price.setText("$"+Double.toString(item.getPrice()));
+			Double x = item.getPrice();
+			DecimalFormat df = new DecimalFormat("#0.00");
+			String xPrice=df.format(x);
+			price.setText("$"+xPrice);
 			VBox one = new VBox(name);
 			VBox two = new VBox(price);
 			one.setAlignment(Pos.CENTER);

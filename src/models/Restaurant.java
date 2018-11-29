@@ -1,5 +1,7 @@
 package models;
 
+import java.text.DecimalFormat;
+
 public class Restaurant {
 	private int id;
 	private String name;
@@ -116,8 +118,9 @@ public class Restaurant {
 				max = temp;
 			}
 		}
-		String xMin = Double.toString(min);
-		String xMax = Double.toString(max);
+		DecimalFormat df = new DecimalFormat("#0.00");
+		String xMin=df.format(min);
+		String xMax=df.format(max);
 		price = ("$"+xMin+" to $"+xMax); 
 		return price;
 	}
