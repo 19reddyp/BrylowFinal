@@ -26,6 +26,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Callback;
+import login.SignOutConfirmationController;
 import models.ArraySortedList;
 import models.ArrayUnsortedList;
 import models.Item;
@@ -140,5 +141,18 @@ public class RatingController implements Initializable {
 		String text = explain.getText();
 		database.addReview(restID, rating, text);
 
+	}
+	@FXML
+	public void redirectLogOut(ActionEvent event) throws IOException {
+		FXMLLoader page = new FXMLLoader(getClass().getResource("../login/SignOutConfirmation.fxml"));
+		AnchorPane pane = page.load();
+		SignOutConfirmationController controller = page.getController();
+		Stage temp = (Stage) ((Node) event.getSource()).getScene().getWindow();
+		controller.setStage(temp);
+		Scene scene = new Scene(pane);
+		Stage temp2 = new Stage();
+		temp2.setTitle("Restaurant Advisor");
+		temp2.setScene(scene);
+		temp2.show();
 	}
 }

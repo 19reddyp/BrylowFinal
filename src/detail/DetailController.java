@@ -22,6 +22,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import login.SignOutConfirmationController;
 import models.ArrayUnsortedList;
 import models.Item;
 import models.Restaurant;
@@ -138,6 +139,19 @@ public class DetailController implements Initializable{
 	public void initialize(URL location, ResourceBundle resources) {
 		menu.setItems(menuList);
 		menu.setCellFactory(menuLists -> new MenuListCell());
+	}
+	@FXML
+	public void redirectLogOut(ActionEvent event) throws IOException {
+		FXMLLoader page = new FXMLLoader(getClass().getResource("../login/SignOutConfirmation.fxml"));
+		AnchorPane pane = page.load();
+		SignOutConfirmationController controller = page.getController();
+		Stage temp = (Stage) ((Node) event.getSource()).getScene().getWindow();
+		controller.setStage(temp);
+		Scene scene = new Scene(pane);
+		Stage temp2 = new Stage();
+		temp2.setTitle("Restaurant Advisor");
+		temp2.setScene(scene);
+		temp2.show();
 	}
 
 }
