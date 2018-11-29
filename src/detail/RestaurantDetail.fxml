@@ -206,8 +206,13 @@
                         </HBox>
                      </children>
                   </VBox>
-                  <ListView fx:id="menu" layoutX="89.0" layoutY="159.0" prefHeight="185.0" prefWidth="396.0" />
+                  <ListView fx:id="menu" layoutX="89.0" layoutY="159.0" prefHeight="173.0" prefWidth="396.0" />
                   <Label layoutX="265.0" layoutY="142.0" text="MENU:" />
+                  <Text layoutX="184.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu items and prices from menuwithprice.com">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </Text>
                </children>
             </AnchorPane>
          </children>
