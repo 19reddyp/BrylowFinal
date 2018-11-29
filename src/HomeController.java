@@ -6,6 +6,9 @@ import database.DatabaseClass;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -13,6 +16,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
+import login.SignOutConfirmationController;
 import models.ArrayUnsortedList;
 import models.Restaurant;
 import restaurant.RestaurantController;
@@ -61,5 +66,18 @@ public class HomeController {
 		RestaurantController controller = page.getController();
 		controller.setList(fit);
 		root.getChildren().setAll(pane);
+	}
+	@FXML
+	public void redirectLogOut(ActionEvent event) throws IOException {
+		FXMLLoader page = new FXMLLoader(getClass().getResource("login/SignOutConfirmation.fxml"));
+		AnchorPane pane = page.load();
+		SignOutConfirmationController controller = page.getController();
+		Stage temp = (Stage) ((Node) event.getSource()).getScene().getWindow();
+		controller.setStage(temp);
+		Scene scene = new Scene(pane);
+		Stage temp2 = new Stage();
+		temp2.setTitle("Restaurant Advisor");
+		temp2.setScene(scene);
+		temp2.show();
 	}
 }

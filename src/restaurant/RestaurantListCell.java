@@ -104,7 +104,6 @@ public class RestaurantListCell extends ListCell<Restaurant> {
 			ratings.setFitHeight(18);
 			box.setSpacing(25);
 			open.setText("DETAILS");
-			open.setStyle("-fx-background-color: #aaaaaa; -fx-border-color: black");
 			open.setOnAction(new EventHandler<ActionEvent>() {
 				@Override
 				public void handle(ActionEvent event) {

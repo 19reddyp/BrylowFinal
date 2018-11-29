@@ -49,7 +49,6 @@ public class DatabaseClass {
 					test = file.nextLine();
 					menu = new ArrayUnsortedList<Item>();
 					while (test.equals("!")) {
-
 						String itemName = file.nextLine();
 						String xCost = file.nextLine();
 						double cost = Double.parseDouble(xCost);
@@ -59,7 +58,6 @@ public class DatabaseClass {
 						} else {
 							break;
 						}
-
 					}
 					reviews = new ArrayUnsortedList<Review>();
 					while (test.equals("!!")) {
@@ -114,4 +112,15 @@ public class DatabaseClass {
 		}
 	}
 
+	public void addNewAccount(String username, String password) throws IOException {
+		File temp = new File("logindata.txt");
+		Scanner file = new Scanner(temp);
+		ArrayList<String> info = new ArrayList<String>();
+		while (file.hasNextLine()) {
+			info.add(file.nextLine());
+		}
+		info.add(info.size(), username + " " + password);
+		Path path = Paths.get("logindata.txt");
+		Files.write(path, info, Charset.defaultCharset());
+	}
 }

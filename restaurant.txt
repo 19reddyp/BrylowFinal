@@ -10,11 +10,89 @@ Casual
 $
 restaurant/Jersey.png
 !
-#8
-7.85
+Jersey Shore's Favorite
+6.35
 !
-#9
-6.85
+Baja Chicken Wrap
+7.95
+!
+Chips
+1.19
+!
+Turkey and Provolone
+7.25
+!
+The Original Italian
+8.25
+!
+Club Sub
+8.25
+!
+Club Supreme
+8.25
+!
+Roast Beef and Provolone
+8.25
+!
+The American Classic
+6.35
+!
+Tuna Fish
+7.25
+!
+The Super Sub
+7.25
+!
+BLT
+6.95
+!
+The Veggie
+6.35
+!
+The Number Four
+6.95
+!
+Provolone Ham Salami
+6.95
+!
+The Cancro Special
+6.95
+!
+Chipotle Turkey
+7.25
+!
+California Club
+8.75
+!
+Philly Cheese Steak
+7.45
+!
+Chipotle Cheese Steak
+7.45
+!
+Big Kahuna Cheese Steak
+7.95
+!
+Chicken California Cheese Steak
+7.45
+!
+Chicken Buffalo Cheese Steak
+7.95
+!
+Meatball and Cheese
+7.45
+!
+Chicken Parm
+7.45
+!
+BBQ Beef
+7.45
+!
+Chicken Caesar Wrap
+7.95
+!
+Cookie
+0.65
 !!
 4
 jersey mikes 4 star
@@ -36,11 +114,56 @@ Casual
 $
 restaurant/Guys.png
 !
-Cheeseburger
-9.95
-!
 Hamburger
-8.85
+6.19
+!
+Cheeseburger
+6.89
+!
+Bacon Burger
+7.19
+!
+Bacon Cheeseburger
+7.89
+!
+Little Hamburger
+4.39
+!
+Little Cheeseburger
+5.09
+!
+Little Bacon Burger
+5.39
+!
+Little Bacon Cheeseburger
+6.09
+!
+Hot Dog
+4.09
+!
+Cheese Dog
+4.79
+!
+Bacon Dog
+5.09
+!
+Bacon Cheese Dog
+5.79
+!
+Veggie Sandwich
+3.29
+!
+Veggie Sandwich Cheese
+3.99
+!
+Grilled Cheese
+3.99
+!
+BLT
+4.99
+!
+Fries
+2.79
 !!
 4
 Excellent location. My go to when I am craving burgers.
@@ -65,11 +188,59 @@ Casual
 $
 restaurant/Panera.jpg
 !
-Bacon Turkey Bravo
-8.95
+Frontega Chicken
+5.69
 !
-Mac and Cheese
-7.99
+Steak & White Cheddar
+6.19
+!
+Roasted Turkey & Avocado BLT
+6.19
+!
+Roasted Turkey, Apple & Cheddar
+6.59
+!
+Bacon Turkey Bravo
+5.69
+!
+Napa Almond Chicken Salad
+5.29
+!
+Italian Combo
+5.99
+!
+Asiago Steak
+5.99
+!
+Sierra Turkey
+5.29
+!
+Smoked Turkey Breast
+4.69
+!
+Mediterranean Veggie
+4.69
+!
+Classic Grilled Cheese
+4.69
+!
+Tuna Salad
+4.69
+!
+Mac & Cheese
+4.99
+!
+Thai Chicken Salad
+8.79
+!
+Asian Sesame Chicken Salad
+7.79
+!
+Fuji Apple Chicken Salad
+8.49
+!
+Cup of Soup
+4.99
 !!
 4
 good
@@ -92,10 +263,37 @@ $
 restaurant/Chipotle.jpg
 !
 Burrito
-8.75
+6.50
 !
-Tacos
-7.89
+Bowl
+6.50
+!
+Taco
+2.40
+!
+3 Tacos
+6.50
+!
+Salad
+6.50
+!
+Chips & Guacamole
+3.25
+!
+Chips & Salsa
+1.95
+!
+Guacamole
+1.95
+!
+Chips
+1.30
+!
+Patron Margarita
+7.15
+!
+Sauza Margarita
+4.70
 !!
 5
 It's been year since I was inside a Chipotle and it was delicious will make a point of going more often when looking for a quick place to go and eat
@@ -105,3 +303,186 @@ good
 !!
 4
 great atmosphere
+!!!!!
+4
+CHICK-FIL-A
+1 N Moorland Rd, Brookfield, WI 53005
+(262) 786-2443
+chick@fil-a.com
+Mon-Sat 6:30am-10:00pm
+Sandwiches
+Casual
+$
+restaurant/Chick.png
+!
+Chicken Sandwich
+3.05
+!
+Chicken Sandwich - Combo
+5.95
+!
+Spicy Chicken Sandwich
+3.29
+!
+Spicy Chicken Sandwich - Combo
+6.19
+!
+8 Nuggets
+3.05
+!
+12 Nuggets
+4.45
+!
+Chick-n-Strips
+3.35
+!
+Waffle Potato Fries
+1.65
+!
+Yogurt Parfait
+2.45
+!
+Fruit Cup
+2.05
+!
+Asian Salad
+7.19
+!
+Cobb Salad
+7.19
+!
+Grilled Market Salad
+7.19
+!
+Icedream Cone
+1.25
+!
+Soft Drinks
+1.35
+!!
+4
+good
+!!!!!
+5
+SUBWAY
+2205 N Calhoun Rd, Brookfield, WI 53005
+(262) 432-0071
+subway@subs.com
+Mon-Sun 8:00am-9:00pm
+Subs
+Casual
+$
+restaurant/Subway.png
+!
+BLT
+5.50
+!
+Big Philly Cheesesteak
+8.95
+!
+Black Forest Ham
+5.50
+!
+Buffalo Chicken
+7.75
+!
+Chicken & Bacon Ranch Melt
+7.75
+!
+Chipotle Chicken Melt with Guacamole
+8.75
+!
+Cold Cut Combo
+5.50
+!
+Italian B.M.T.
+6.75
+!
+Meatball Marinara
+5.50
+!
+Mediterranean Chicken
+7.75
+!
+Mediterranean Steak
+7.75
+!
+Oven Roasted Chicken
+6.75
+!
+Pizza Sub with Cheese
+5.50
+!
+Roast Beef
+7.75
+!
+Spicy Italian
+5.50
+!
+Steak & Cheese
+7.75
+!!
+3
+great
+!!!!!
+6
+Yamato Sushi
+12900 W Bluemound Rd, Elm Grove, WI 53122
+(262) 784-8383
+yamato@sushi.com
+Mon-Sun 11:00am-10:00pm
+Sushi
+Fine Dining
+$$$
+restaurant/Yamato.jpeg
+!
+Age Tofu
+4.95
+!
+Shumai
+6.95
+!
+Tuna Tataki
+9.95
+!
+Beef Tataki
+10.95
+!
+Yakiton
+5.95
+!
+Mori Sunomono
+7.95
+!
+Seaweed Salad
+3.95
+!
+Cucumber Crab Salad
+3.95
+!
+Soft Shell Clab
+8.95
+!
+Gyoza
+6.95
+!
+Chicken Teriyaki
+13.95
+!
+Sirloin Steak Teriyaki
+17.95
+!
+Salmon Teriyaki
+16.95
+!
+Shrimp Teriyaki
+17.95
+!
+Chicken Tempura
+13.95
+!
+Vegetable Tempura
+12.95
+!!
+5
+yummy
