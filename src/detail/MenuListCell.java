@@ -63,7 +63,7 @@ public class MenuListCell extends ListCell<Item> {
 			two.setAlignment(Pos.CENTER);
 			HBox box = new HBox(one, two);
 			box.setAlignment(Pos.CENTER);
-			box.setSpacing(10);
+			box.setSpacing(20);
 			setGraphic(box);
 		}
 	}

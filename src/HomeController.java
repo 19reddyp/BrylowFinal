@@ -1,11 +1,14 @@
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 import java.util.Scanner;
 
 import database.DatabaseClass;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -13,6 +16,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
@@ -22,7 +26,7 @@ import models.ArrayUnsortedList;
 import models.Restaurant;
 import restaurant.RestaurantController;
 
-public class HomeController {
+public class HomeController implements Initializable{
 
 	@FXML
 	private ImageView rest;
@@ -79,5 +83,18 @@ public class HomeController {
 		temp2.setTitle("Restaurant Advisor");
 		temp2.setScene(scene);
 		temp2.show();
+	}
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+
+		term.setOnKeyPressed(event -> {
+			   if(event.getCode() == KeyCode.ENTER){
+				   try {
+					search();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			   }
+			}); 
 	}
 }

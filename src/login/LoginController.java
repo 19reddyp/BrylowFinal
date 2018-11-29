@@ -8,18 +8,23 @@ import java.util.ResourceBundle;
 import java.util.Scanner;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import restaurant.RestaurantListCell;
 
-public class LoginController {
+public class LoginController implements Initializable{
 	@FXML
 	private TextField user;
 
@@ -39,7 +44,7 @@ public class LoginController {
 	}
 
 	@FXML
-	private void login(ActionEvent event) throws IOException {
+	private void login() throws IOException {
 		File temp = new File("logindata.txt");
 		Scanner scanner = new Scanner(temp);
 		while (scanner.hasNext()) {
@@ -52,11 +57,25 @@ public class LoginController {
 		}
 
 	}
-	
+
 	@FXML
 	public void redirectNewAccount(ActionEvent event) throws IOException {
 		FXMLLoader page = new FXMLLoader(getClass().getResource("../newAccount/NewAccount.fxml"));
 		AnchorPane pane = page.load();
 		root.getChildren().setAll(pane);
+	}
+
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+
+		pass.setOnKeyPressed(event -> {
+			   if(event.getCode() == KeyCode.ENTER){
+				   try {
+					login();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			   }
+			}); 
 	}
 }
