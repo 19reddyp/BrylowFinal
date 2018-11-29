@@ -362,3 +362,127 @@ Soft Drinks
 !!
 4
 good
+!!!!!
+5
+SUBWAY
+2205 N Calhoun Rd, Brookfield, WI 53005
+(262) 432-0071
+subway@subs.com
+Mon-Sun 8:00am-9:00pm
+Subs
+Casual
+$
+restaurant/Subway.png
+!
+BLT
+5.50
+!
+Big Philly Cheesesteak
+8.95
+!
+Black Forest Ham
+5.50
+!
+Buffalo Chicken
+7.75
+!
+Chicken & Bacon Ranch Melt
+7.75
+!
+Chipotle Chicken Melt with Guacamole
+8.75
+!
+Cold Cut Combo
+5.50
+!
+Italian B.M.T.
+6.75
+!
+Meatball Marinara
+5.50
+!
+Mediterranean Chicken
+7.75
+!
+Mediterranean Steak
+7.75
+!
+Oven Roasted Chicken
+6.75
+!
+Pizza Sub with Cheese
+5.50
+!
+Roast Beef
+7.75
+!
+Spicy Italian
+5.50
+!
+Steak & Cheese
+7.75
+!!
+3
+great
+!!!!!
+6
+Yamato Sushi
+12900 W Bluemound Rd, Elm Grove, WI 53122
+(262) 784-8383
+yamato@sushi.com
+Mon-Sun 11:00am-10:00pm
+Sushi
+Fine Dining
+$$$
+restaurant/Yamato.jpeg
+!
+Age Tofu
+4.95
+!
+Shumai
+6.95
+!
+Tuna Tataki
+9.95
+!
+Beef Tataki
+10.95
+!
+Yakiton
+5.95
+!
+Mori Sunomono
+7.95
+!
+Seaweed Salad
+3.95
+!
+Cucumber Crab Salad
+3.95
+!
+Soft Shell Clab
+8.95
+!
+Gyoza
+6.95
+!
+Chicken Teriyaki
+13.95
+!
+Sirloin Steak Teriyaki
+17.95
+!
+Salmon Teriyaki
+16.95
+!
+Shrimp Teriyaki
+17.95
+!
+Chicken Tempura
+13.95
+!
+Vegetable Tempura
+12.95
+!!
+5
+yummy
