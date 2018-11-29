@@ -49,7 +49,6 @@ public class DatabaseClass {
 					test = file.nextLine();
 					menu = new ArrayUnsortedList<Item>();
 					while (test.equals("!")) {
-
 						String itemName = file.nextLine();
 						String xCost = file.nextLine();
 						double cost = Double.parseDouble(xCost);
@@ -59,7 +58,6 @@ public class DatabaseClass {
 						} else {
 							break;
 						}
-
 					}
 					reviews = new ArrayUnsortedList<Review>();
 					while (test.equals("!!")) {
