@@ -30,7 +30,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="log" layoutX="513.0" layoutY="9.0" mnemonicParsing="false" onAction="#redirectLogOut" prefHeight="36.0" prefWidth="48.0" style="-fx-border-color: white; -fx-background-color: white;">
+            <Button fx:id="log" layoutX="555.0" layoutY="7.0" mnemonicParsing="false" onAction="#redirectLogOut" prefHeight="36.0" prefWidth="48.0" style="-fx-border-color: white; -fx-background-color: white;">
                <graphic>
                   <ImageView fitHeight="28.0" fitWidth="33.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -50,12 +50,7 @@
             <Font name="System Bold" size="23.0" />
          </font>
       </Label>
-      <ImageView fitHeight="28.0" fitWidth="33.0" layoutX="558.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../images/shopping-cart.png" />
-         </image>
-      </ImageView>
-      <Button layoutX="460.0" layoutY="1.0" mnemonicParsing="false" onAction="#redirect" prefHeight="36.0" prefWidth="48.0" style="-fx-border-color: white; -fx-background-color: white;">
+      <Button layoutX="502.0" layoutY="-1.0" mnemonicParsing="false" onAction="#redirect" prefHeight="36.0" prefWidth="48.0" style="-fx-border-color: white; -fx-background-color: white;">
          <graphic>
             <ImageView fitHeight="28.0" fitWidth="33.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
                <image>
