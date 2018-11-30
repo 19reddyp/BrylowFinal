@@ -143,7 +143,7 @@ public class Restaurant {
 		for (int x = 0; x < num; x++) {
 			count += reviews.getNext().getRating();
 		}
-		int avg = (int) count / num;
+		int avg = (int)(Math.round(count / num));
 		return avg;
 	}
 	public ArrayUnsortedList<Review> getReview(){
